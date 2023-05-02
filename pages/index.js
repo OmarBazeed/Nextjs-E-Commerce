@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import ProductList from '../components/products/ProductList';
 import { Fragment } from 'react';
-// import { dbConnect } from './../utils/mongo';
-// import Product from './../models/Product';
+import { dbConnect } from './../utils/mongo';
+import Product from './../models/Product';
 
 
 
@@ -50,15 +50,23 @@ export default HomePage;
 export async function getServerSideProps() {
 
   //* Because Of getServerSideProps() Fun Goes Or Occurs In The Server We Have't Call The Endpoint( Which Is Created By The Server Itself So If We Called The Endpoint We Are Calling The Server Again Or Loopy Call ) So In The Server We Have To Access The Database Directly By Call the dbConnect() Fun The Bring THE Products From The models.Product..
-  //--> dbConnect();
-  //--> const products = await Product.find();
+  dbConnect();
+  const products = await Product.find();
 
-  const res = await fetch(`${process.env.APP_DEV || process.env.APP_PROD}/api/products`).then(res => res.json());
-  const products = res.data;
+  //* Here We Are Fetching The Data From The Endpoint Which Is Created In The Server And The getServerSideProps() Fun Occurs In The Server So It Is Loopy Call !!! NOT CORRECT ..SO We Have To Access the Database Not Access The Endpoint ....As Shown
+  // const res = await fetch(`${process.env.APP_DEV || process.env.APP_PROD}/api/products`).then(res => res.json());
+  // const products = res.data;
 
   return {
     props: {
-      products
-    }
-  }
+      //? Here We Have To Formate The Data Which Is Backed From The Database(MongoDB) Cause The id--> Is Returned As An Object So We Have To Reformate It As A String ( tostring() )  
+      //* هنا لازم نعمل فورماتينج للداتا الى راجعه من المونج دى لان ال اى دى بيكون راجع على شكل اوبجيكت و دا  ممكن يعمل مشاكل فى الريندر ف كان لابد من عمل الفورماتينج للداتا الى راجعه دى ولو استخدمناها من غير فورماتينج  مش هتشتغل ... 
+      products: products.map((product) => ({
+        image: product.image,
+        name: product.name,
+        price: product.price,
+        id: product._id.toString(),
+      })),
+    },
+  };
 }
