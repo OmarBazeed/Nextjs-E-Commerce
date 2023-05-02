@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import ProductList from '../components/products/ProductList';
 import { Fragment } from 'react';
+// import { dbConnect } from './../utils/mongo';
+// import Product from './../models/Product';
 
 
 
@@ -46,8 +48,14 @@ export default HomePage;
 
 //! Using getServerSideProps (SSR => Server Side Rendering)...
 export async function getServerSideProps() {
+
+  //* Because Of getServerSideProps() Fun Goes Or Occurs In The Server We Have't Call The Endpoint( Which Is Created By The Server Itself So If We Called The Endpoint We Are Calling The Server Again Or Loopy Call ) So In The Server We Have To Access The Database Directly By Call the dbConnect() Fun The Bring THE Products From The models.Product..
+  //--> dbConnect();
+  //--> const products = await Product.find();
+
   const res = await fetch(`${process.env.APP_DEV || process.env.APP_PROD}/api/products`).then(res => res.json());
   const products = res.data;
+
   return {
     props: {
       products
