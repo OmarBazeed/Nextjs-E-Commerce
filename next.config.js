@@ -2,6 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  env: {
+    MONGO_URI: "mongodb+srv://omarbazeed:gH1k82RvuwGyK03n@cluster0.nd1du9e.mongodb.net/?retryWrites=true&w=majority",
+    APP_DEV: "http://localhost:3000",
+    APP_PROD: "https://nextjs-e-commerce.vercel.app",
+  },
   images: {
     domains: ["images.pexels.com"]
   }
