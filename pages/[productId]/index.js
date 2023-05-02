@@ -36,15 +36,15 @@ export default ProductDetailsPage;
 export const getStaticPaths = async () => {
 
   //* Connect to database to get products ids  ** Oridanry Way (Fetching Data From Endpoint) **
-  // const res = await fetch(`${process.env.APP_DEV || process.env.APP_PROD}/api/products`).then(res => res.json())
-  // const ids = res.data.map(product => {
-  //   return { params: { productId: product._id } }
-  // })
+  const res = await fetch(`${process.env.APP_DEV || process.env.APP_PROD}/api/products`).then(res => res.json())
+  const ids = res.data.map(product => {
+    return { params: { productId: product._id } }
+  })
 
   //* Connect to database to get products ids  ** This Way By Connecting To The Database In MongoDB  **
-  dbConnect();
-  const products = await Product.find({}, { _id: 1 });
-  const ids = products.map(product => { return { params: { productId: product._id.toString() } } })
+  // dbConnect();
+  // const products = await Product.find({}, { _id: 1 });
+  // const ids = products.map(product => { return { params: { productId: product._id.toString() } } })
 
   return {
     // to only apply the selected/determined ids from the database So other paths Will Appear 404 ! 
