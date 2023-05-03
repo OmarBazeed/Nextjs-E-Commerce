@@ -18,7 +18,7 @@
    ``` 
   ---------------------------------------------------------------------------------------------------------------
  ### Live Demo : 
- [Full-Stack Amazon Clone](nextjs-e-commerce-q2basff4g-omarbazeed.vercel.app)
+ [Full-Stack Amazon Clone](https://nextjs-e-commerce-nu.vercel.app/)
  
  ---------------------------------------------------------------------------------------------------------------
  ### Live Pictures :
