@@ -65,6 +65,7 @@ export async function getServerSideProps() {
         image: product.image,
         name: product.name,
         price: product.price,
+        desc: product.desc,
         id: product._id.toString(),
       })),
     },
