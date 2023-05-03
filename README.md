@@ -1,38 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+##  E-Commerce Website With Features Adding New products By The Admin All This Using Nextjs And MongoDB  :
+ + Creating An Amazon Clone With `React`==>(frontend) And `firebase`==>(backend) And `stripe`==> **(For Adding Payment Method)**
+ + Using Stipe And Stripe-js For Activating The Payment Methods Using Some `stripe` Functions()
+ + Using React and Contxt API As A frontend Role 
+ + Using Firebase With ( `axios` )for Authentication And Data Base For The Application As A Backend Role
+ + Fully Responsive App Smoothly Using `tailwind`
+ + Using `sweetalert` , `sweetalert2` , `memo` , `shortid` , `animate.css`  For Beatify The App
+ + Go And Take A Look Then Go For Coding...
+ ---------------------------------------------------------------------------------------------------------------
+ ### Installation Requierments :
+ ```
+ npm i --save 
+             stripe @stripe/stripe-js @stripe/react-stripe-js
+             firebase axios
+             tailwind -D npx tailwindcss init
+             sweetalert sweetalert2 memo shortid animate.css
+             react-router-dom
+   ``` 
+  ---------------------------------------------------------------------------------------------------------------
+ ### Live Demo : 
+ [Full-Stack Amazon Clone](nextjs-e-commerce-q2basff4g-omarbazeed.vercel.app)
+ 
+ ---------------------------------------------------------------------------------------------------------------
+ ### Live Pictures :
+ <div>
+ <img src='https://user-images.githubusercontent.com/114960595/219815623-e7c58584-f849-49f6-93d2-4d75d0594499.png' />
+ <br />
+ <img src='https://user-images.githubusercontent.com/114960595/219815543-89406939-ea21-4246-835b-fef71f040e0b.png' />
+  <br />
+ <img src='https://user-images.githubusercontent.com/114960595/219815544-3b7f5c95-313b-4768-8389-b500615c4be9.png' />
+  <br />
+ <img src='https://user-images.githubusercontent.com/114960595/219815563-f472e978-bf69-4fd4-b77d-2312000139a8.png' />
+  <br />
+ <img src='https://user-images.githubusercontent.com/114960595/219815576-b1670210-1310-4561-b45f-e77639fb9f89.png' />
+ <br />
+ <img src='https://user-images.githubusercontent.com/114960595/219815583-120eda69-e6e7-4961-b708-98b632960ebb.png' />
+ <br />
+ <br />
+ <h4> Stripe Concept ==> How Stripe Works </h4>
+ <img src='https://user-images.githubusercontent.com/114960595/219816202-282bf8bd-31e3-472f-82cb-2dd9edb8aad2.png' />
+ </div>
